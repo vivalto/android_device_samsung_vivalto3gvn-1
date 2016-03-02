@@ -117,13 +117,14 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+	dhcpcd.conf \
 	wpa_supplicant \
 	hostapd
 
 WIFI_CONFIGS := \
 	$(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf \
-	$(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf \
-	$(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf
+#	$(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf \
+#	$(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(WIFI_CONFIGS),$(f):system/etc/wifi/$(notdir $(f)))
