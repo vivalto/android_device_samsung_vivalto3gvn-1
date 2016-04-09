@@ -168,6 +168,9 @@ BOARD_SEPOLICY_UNION :=	\
 	vold.te	\
 	zygote.te
 
+# Use dmalloc() for such low memory devices like us
+MALLOC_IMPL := dlmalloc
+
 # Use prebuilt webviewchromium to cut down build time
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
